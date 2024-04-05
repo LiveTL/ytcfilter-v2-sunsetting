@@ -1,3 +1,20 @@
+## 2.2.1
+Hi, it's been a while!
+
+Originally, YtcFilter's developer (RomainLK) discontinued development of the extension in 2021. Due to Google's forced introduction of Manifest v3, YtcFilter was due for removal from the Chrome Web Store in June 2024. However, the LiveTL team (the devs behind LiveTL, HyperChat, and several official Hololive projects) has revived development for the project.
+
+YtcFilter v3 is all-new: the entire codebase has been rewritten from scratch, and new powerful filtering functionality has been added. We are currently wrapping up our beta testing phase, and we will roll out the update sometime within the next two months.
+
+Because the v2 extension is very outdated, we cannot guarantee that all data will be transferred correctly to v3. Therefore, we urge you to **BACK UP YOUR YTCFILTER STORAGE DATA** as soon as possible. This can be done through YtcFilter Popout -> Settings -> Help -> Copy Storage.
+
+If you prefer to continue using YtcFilter v2 rather than upgrading, your options are limited (due to Google's forced MV3 rollout). You may need to find a browser which will continue providing MV2 functionality and sideload a custom release from the [v2 repository](https://github.com/RomainLK/ytc-filter/releases/tag/v2.2.0).
+
+If you have any questions or would like to participate in the YtcFilter v3 beta test, please join our [Discord server](https://discord.com/invite/uJrV3tmthg); we would be happy to assist you. The source code for YtcFilter v3 is also open source [on GitHub](https://github.com/LiveTL/ytcfilter).
+
+Please look forward to the v3 update!
+
+-Kento
+
 ## 2.2.0
 Bug fixes:
 - Word-break change

@@ -89,7 +89,7 @@
     </b-modal>
     <b-modal v-model="showWelcome" size="lg" no-close-on-backdrop ok-only :title="`ytcFilter ${version} 'Lulu'`" @hidden="onHiddenWelcome">
       <p>
-        This is the last version. Development of ytcFilter will stop but you can always fork. Oshi graduation, health, time, motivation, stress are all the reasons wny I won't continue. Thanks for your support everyone. I hope ytcFilter helped you enjoy more streams and chat.
+        YtcFilter v2 will be upgraded to v3 in the near future. Please check the changelog for more information.
       </p>
 
       <p>
@@ -168,6 +168,11 @@ export default {
     )
     await new Promise(resolve => setTimeout(resolve, 500))
     this.showWelcome = this.$store.state.helpAlert.welcome
+    const params = new URLSearchParams(window.location.search)
+    if (params.has('forceShowChangeLog')) {
+      this.showChangeLog = true
+      this.showWelcome = false
+    }
   },
   computed: {
     storagePercent() {

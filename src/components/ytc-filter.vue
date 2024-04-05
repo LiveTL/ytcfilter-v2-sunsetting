@@ -408,9 +408,20 @@ export default {
       this.notify('Error report copied to clipboard')
     },
     notifyChangelog() {
+      const func = (e) => {
+        e.preventDefault()
+        this.sendMessage('popout', {
+          videoId: 'null',
+          channelId: 'null',
+          channelName: 'null&forceShowChangeLog=true',
+          videoName: 'null'
+        })
+        window.removeEventListener('openChangelog', func)
+      }
+      window.addEventListener('openChangelog', func)
       this.notify(
         `
-      Welcome to ytcFilter ${manifest.version}. In order to start, please check the "Popout/Settings". 
+      There is important news regarding the future of YtcFilter. <span style="font-weight: 600; text-decoration: underline; cursor: pointer;" onclick="window.dispatchEvent(new CustomEvent('openChangelog'));">Please read the changelog</span>.
       `,
         0
       )
